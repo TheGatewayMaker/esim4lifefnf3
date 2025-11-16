@@ -16,10 +16,7 @@ export default function Header() {
   const location = useLocation();
   const [theme, setTheme] = useState<string>(
     () =>
-      localStorage.getItem("theme") ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light"),
+      localStorage.getItem("theme") || "dark",
   );
 
   useEffect(() => {
